@@ -1,0 +1,32 @@
+[id='windows-container-overview']
+= Windows container overview
+include::modules/common-attributes.adoc[]
+:context: windows-container-overview
+
+toc::[]
+
+Windows Container Support for Red Hat OpenShift is a feature providing the ability to run Windows compute nodes in an OpenShift Container Platform cluster. This is possible by using the Red Hat Windows Machine Config Operator (WMCO) to install and manage Windows nodes. By using Red Hat subscription, you can get support for Windows Container. For more information see, xref:../windows_containers/windows-containers-release-note.adoc#windows-containers-release-note[Windows Container Support for Red Hat OpenShift release notes/link>].
+
+xref:../windows_containers/understanding-windows-container-workloads.adoc#understanding-windows-container-workloads[Windows container workloads]:
+For workloads including both Linux and Windows, OpenShift Container Platform allows you to deploy Windows workloads running on Windows Server containers while also providing traditional Linux workloads hosted on Red Hat Enterprise Linux CoreOS (RHCOS) or Red Hat Enterprise Linux (RHEL).
+Windows container workloads support for clusters running on the following cloud providers:
+
+* Amazon Web Services (AWS)
+* Microsoft Azure
+
+xref:../windows_containers/enabling-windows-container-workloads.adoc#enabling-windows-container-workloads[Enabling Windows container workloads]: You need a Machine Config Operator (WMCO) to run Windows workloads in your cluster. The WMCO orchestrates the process of deploying and managing Windows workloads on a cluster. You can <install MCO/link> by using the web console and CLI.
+
+Creating a Windows MachineSet object: You can create a Windows MachineSet object to create infrastructure Windows machine sets and related machines so that you can move supporting Windows workloads to the new Windows machines. You can create a Windows MachineSet object on the following platforms:
+
+* xref:../windows_containers/creating-windows-machineset-aws.adoc#creating-windows-machineset-aws[AWS]
+* xref:../windows_containers/creating-windows-machineset-azure.adoc#creating-windows-machineset-azure[Azure]
+
+xref:../windows_containers/scheduling-windows-workloads.adoc#scheduling-windows-workloads[Scheduling Windows container workloads]: You can schedule Windows workloads to Windows compute nodes.
+
+xref:../windows_containers/windows-node-upgrades.adoc#windows-node-upgrades[Windows node upgrades]: You can perform <Windows Machine Config Operator upgrades/link> to ensure that your Windows nodes have the latest updates.
+
+xref:../windows_containers/removing-windows-nodes.adoc#removing-windows-nodes[Removing Windows nodes]: You can remove a Windows node by deleting a specific machine.
+
+xref:../windows_containers//disabling-windows-container-workloads.adoc#/disabling-windows-container-workloads[Disabling Windows container workloads]: You can disable Windows container workloads by performing the following:
+Uninstalling the Windows Machine Config Operator
+Deleting the Windows Machine Config Operator namespace
