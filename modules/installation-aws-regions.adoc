@@ -5,7 +5,17 @@
 [id="installation-aws-regions_{context}"]
 = Supported AWS regions
 
-You can deploy an {product-title} cluster to the following public regions:
+You can deploy an {product-title} cluster to the following regions.
+
+[NOTE]
+====
+Your IAM user must have the permission `tag:GetResources` in the region `us-east-1` to delete the base cluster resources. As part of the AWS API requirement, the {product-title} installation program performs various actions in this region.
+====
+
+[id="installation-aws-public_{context}"]
+== AWS public regions
+
+The following AWS public regions are supported:
 
 * `af-south-1` (Cape Town)
 * `ap-east-1` (Hong Kong)
