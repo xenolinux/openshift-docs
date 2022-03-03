@@ -363,22 +363,22 @@ The following Amazon Web Services (AWS) instance types are supported with {produ
 |`m6i.2xlarge`
 |
 |
-|
+|x
 
 |`m6i.4xlarge`
 |
 |
-|
+|x
 
 |`m6i.8xlarge`
 |
 |
-|
+|x
 
 |`m6i.16xlarge`
 |
 |
-|
+|x
 
 |===
 ====
