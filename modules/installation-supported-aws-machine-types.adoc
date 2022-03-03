@@ -360,6 +360,26 @@ The following Amazon Web Services (AWS) instance types are supported with {produ
 |
 |x
 
+|`m6i.2xlarge`
+|
+|
+|
+
+|`m6i.4xlarge`
+|
+|
+|
+
+|`m6i.8xlarge`
+|
+|
+|
+
+|`m6i.16xlarge`
+|
+|
+|
+
 |===
 ====
 
