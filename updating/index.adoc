@@ -20,7 +20,6 @@ xref:../updating/understanding-upgrade-channels-release.adoc#understanding-upgra
 * xref:../updating/understanding-upgrade-channels-release.adoc#fast-stable-channel-strategies_understanding-upgrade-channels-releases[Understanding fast and stable channel use and strategies]
 * xref:../updating/understanding-upgrade-channels-release.adoc#restricted-network-clusters_understanding-upgrade-channels-releases[Understanding restricted network clusters]
 * xref:../updating/understanding-upgrade-channels-release.adoc#switching-between-channels_understanding-upgrade-channels-releases[Switching between channels]
-* xref:../updating/understanding-upgrade-channels-release.adoc#conditional-updates-overview_understanding-upgrade-channels-releases[Understanding conditional updates]
 
 ["updating-clusters-overview-prepare-eus-to-eus-update"]
 == Preparing to perform an EUS-to-EUS update
