@@ -1,0 +1,114 @@
+// Module included in the following assemblies:
+//
+// * installing/installing_vsphere/installing-vsphere-installer-provisioned.adoc
+
+:_content-type: CONCEPT
+[id="installation-vsphere-installer-network-requirements_{context}"]
+= VMware vSphere network connectivity requirements
+
+You must configure the network connectivity between machines to allow {product-title} cluster
+components to communicate. Each machine must be able to resolve the hostnames
+of all other machines in the cluster.
+
+This section provides details about the ports that are required.
+
+ifndef::restricted,origin[]
+[IMPORTANT]
+====
+In connected {product-title} environments, all nodes are required to have internet access to pull images
+for platform containers and provide telemetry data to Red Hat.
+====
+ifeval::["{context}" == "installing-rhv-restricted-network"]
+:!rhv:
+endif::[]
+ifeval::["{context}" == "installing-rhv-user-infra"]
+:!rhv:
+endif::[]
+endif::restricted,origin[]
+
+ifdef::ibm-z-kvm[]
+[NOTE]
+====
+The {op-system-base} KVM host must be configured to use bridged networking in libvirt or MacVTap to connect the network to the virtual machines. The virtual machines must have access to the network, which is attached to the {op-system-base} KVM host. Virtual Networks, for example network address translation (NAT), within KVM are not a supported configuration.
+====
+endif::ibm-z-kvm[]
+
+.Ports used for all-machine to all-machine communications
+[cols="2a,2a,5a",options="header"]
+|===
+
+|Protocol
+|Port
+|Description
+
+|ICMP
+|N/A
+|Network reachability tests
+
+.4+|TCP
+|`1936`
+|Metrics
+
+|`9000`-`9999`
+|Host level services, including the node exporter on ports `9100`-`9101` and
+the Cluster Version Operator on port `9099`.
+
+|`10250`-`10259`
+|The default ports that Kubernetes reserves
+
+|`10256`
+|openshift-sdn
+
+.5+|UDP
+|`4789`
+|VXLAN
+
+|`6081`
+|Geneve
+
+|`9000`-`9999`
+|Host level services, including the node exporter on ports `9100`-`9101`.
+
+|`500`
+|IPsec IKE packets
+
+|`4500`
+|IPsec NAT-T packets
+
+|TCP/UDP
+|`30000`-`32767`
+|Kubernetes node port
+
+|ESP
+|N/A
+|IPsec Encapsulating Security Payload (ESP)
+
+|===
+
+.Ports used for all-machine to control plane communications
+[cols="2a,2a,5a",options="header"]
+|===
+
+|Protocol
+|Port
+|Description
+
+|TCP
+|`6443`
+|Kubernetes API
+
+|===
+
+.Ports used for control plane machine to control plane machine communications
+[cols="2a,2a,5a",options="header"]
+|===
+
+|Protocol
+|Port
+|Description
+
+|TCP
+|`2379`-`2380`
+|etcd server and peer ports
+
+|===
