@@ -169,6 +169,9 @@ The following metrics are sent through telemetry.
 [id="ocp-4-12-nw-ingress-autoscaling"]
 ==== Ingress Controller Autoscaling
 
+[id="ocp-4-12-nw-ingress-autoscaling"]
+==== Ingress Controller Autoscaling
+
 You can now use the {product-title} Custom Metrics Autoscaler Operator to dynamically scale the default Ingress Controller based on metrics in your deployed cluster, such as the number of worker nodes available.
 
 For more information, see xref:../networking/ingress-operator.adoc#nw-autoscaling-ingress-controller[Autoscaling an Ingress Controller].
