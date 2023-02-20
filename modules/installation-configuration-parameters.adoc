@@ -677,6 +677,10 @@ ifdef::gcp[If you are installing on GCP into a shared virtual private cloud (VPC
 ====
 Not all CCO modes are supported for all cloud providers. For more information about CCO modes, see the _Cloud Credential Operator_ entry in the _Cluster Operators reference_ content.
 ====
+[NOTE]
+====
+If your AWS account have SCP (Service control policies) enabled, you must modify `install-config.yaml` file and add the `credentialsMode: Mint` entry.
+====
 |`Mint`, `Passthrough`, `Manual`, or an empty string (`""`).
 ifndef::openshift-origin[]
 |`fips`
