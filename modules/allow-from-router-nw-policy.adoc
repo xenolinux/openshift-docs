@@ -1,0 +1,22 @@
+// Module included in the following assemblies:
+//
+// * configuring_ingress_cluster_traffic/configuring-ingress-cluster-traffic-ingress-controller.adoc
+// * ingress-operator.adoc
+
+:_content-type: PROCEDURE
+[id="nw-allow-from-router_{context}"]
+= Creating a network policy to allow traffic from router
+
+You can create a policy that allows traffic to the pods from routers.
+
+.Prerequisites
+
+*
+*
+*
+
+.Procedure
+
+.
+
+
