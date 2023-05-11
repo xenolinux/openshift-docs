@@ -993,6 +993,8 @@ Topics:
     File: cert-manager-operator-issuer-acme
   - Name: Configuring the egress proxy for the cert-manager Operator for Red Hat OpenShift
     File: cert-manager-operator-proxy
+  - Name: Authenticating the cert-manager Operator for Red Hat OpenShift with GCP
+    File: cert-manager-authenticate-gcp-non-sts
   - Name: Uninstalling the cert-manager Operator for Red Hat OpenShift
     File: cert-manager-operator-uninstall
 - Name: Viewing audit logs
