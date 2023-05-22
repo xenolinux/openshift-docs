@@ -1,0 +1,13 @@
+:_content-type: ASSEMBLY
+[id="cert-manager-authenticate-non-sts-gcp"]
+= Authenticating the {cert-manager-operator} without GCP Workload Identity
+include::_attributes/common-attributes.adoc[]
+:context: cert-manager-authenticate-non-sts-gcp
+
+toc::[]
+
+You can authenticate the {cert-manager-operator} without GCP Security Token Service (STS). You can prepare and then configure cloud credentials for the {cert-manager-operator} on the GCP.
+
+include::modules/cert-manager-prepare-cloud-credentials-gcp-non-sts.adoc[leveloffset=+1]
+
+include::modules/cert-manager-configure-cloud-credentials-gcp-non-sts.adoc[leveloffset=+1]
