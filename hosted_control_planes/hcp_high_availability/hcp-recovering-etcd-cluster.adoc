@@ -1,0 +1,13 @@
+:_mod-docs-content-type: ASSEMBLY
+[id="hcp-recovering-etcd-cluster"]
+= Recovering an unhealthy etcd cluster
+include::_attributes/common-attributes.adoc[]
+:context: hcp-recovering-etcd-cluster
+
+toc::[]
+
+In a highly available control plane, three etcd pods run as a part of a stateful set in an etcd cluster. To recover an etcd cluster, you can find an unhealthy etcd pod by checking an etcd cluster health.
+
+include::modules/hosted-cluster-etcd-status.adoc[leveloffset=+1]
+
+include::modules/hosted-cluster-single-node-recovery.adoc[leveloffset=+1]
