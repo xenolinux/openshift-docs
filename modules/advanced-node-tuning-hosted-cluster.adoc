@@ -6,10 +6,14 @@
 [id="advanced-node-tuning-hosted-cluster_{context}"]
 = Advanced node tuning for hosted clusters by setting kernel boot parameters
 
+<<<<<<< HEAD
 :FeatureName: Hosted control planes
 include::snippets/technology-preview.adoc[]
 
 For more advanced tuning in hosted control planes, which requires setting kernel boot parameters, you can also use the Node Tuning Operator. The following example shows how you can create a node pool with huge pages reserved.
+=======
+For more advanced tuning in {hcp}, which requires setting kernel boot parameters, you can also use the Node Tuning Operator. The following example shows how you can create a node pool with huge pages reserved.
+>>>>>>> 10e554b8fb (OSDOCS#10543: Replace terms with new attributes)
 
 .Procedure
 

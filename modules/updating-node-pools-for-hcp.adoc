@@ -1,0 +1,28 @@
+// Module included in the following assemblies:
+//
+// * updates/updating_a_cluster/updating-hosted-control-planes.adoc
+// * hosted_control_planes/hcp-updating.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="updating-node-pools-for-hcp_{context}"]
+= Updating node pools for {hcp}
+
+On {hcp}, you update your version of {product-title} by updating the node pools. The node pool version must not surpass the hosted control plane version.
+
+.Procedure
+
+* To start the process to update to a new version of {product-title}, change the `spec.release.image` value of the node pool by entering the following command:
++
+[source,terminal]
+----
+$ oc -n <hosted_cluster_namespace> patch hostedcluster <hosted_cluster_name> --patch '{"spec":{"release":{"image": "<image_name>"}}}' --type=merge
+----
+
+.Verification
+
+* To verify that the new version was rolled out, check the `.status.version` and `.status.conditions` values in the `HostedCluster` custom resource (CR) by running the following command:
++
+[source,terminal]
+----
+$ oc get hostedcluster <hosted_cluster_name> -o yaml
+----

@@ -4,9 +4,13 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="sriov-operator-hosted-control-planes_{context}"]
-= Deploying the SR-IOV Operator for hosted control planes
+= Deploying the SR-IOV Operator for {hcp}
 
+<<<<<<< HEAD
 :FeatureName: Hosted control planes
+=======
+:FeatureName: {hcp-capital} on the AWS platform
+>>>>>>> 10e554b8fb (OSDOCS#10543: Replace terms with new attributes)
 include::snippets/technology-preview.adoc[]
 
 [role="_abstract"]

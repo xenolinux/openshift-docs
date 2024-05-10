@@ -1,4 +1,5 @@
 :_mod-docs-content-type: ASSEMBLY
+<<<<<<< HEAD:backup_and_restore/control_plane_backup_and_restore/disaster_recovery/dr-hosted-cluster-within-aws-region.adoc
 [id="dr-hosted-cluster-within-aws-region"]
 = Disaster recovery for a hosted cluster within an AWS region
 include::_attributes/common-attributes.adoc[]
@@ -7,8 +8,50 @@ include::_attributes/common-attributes.adoc[]
 toc::[]
 
 In a situation where you need disaster recovery (DR) for a hosted cluster, you can recover a hosted cluster to the same region within AWS. For example, you need DR when the upgrade of a management cluster fails and the hosted cluster is in a read-only state.
+=======
+[id="hcp-backup-restore-dr"]
+include::_attributes/common-attributes.adoc[]
+= Backup, restore, and disaster recovery for {hcp}
+:context: hcp-backup-restore-dr
 
-:FeatureName: Hosted control planes
+toc::[]
+
+If you need to back up and restore etcd on a hosted cluster or provide disaster recovery for a hosted cluster, see the following procedures.
+
+[id="hosted-etcd-non-disruptive-recovery"]
+== Recovering etcd pods for hosted clusters
+
+In hosted clusters, etcd pods run as part of a stateful set. The stateful set relies on persistent storage to store etcd data for each member. In a highly available control plane, the size of the stateful set is three pods, and each member has its own persistent volume claim.
+
+include::modules/hosted-cluster-etcd-status.adoc[leveloffset=+2]
+include::modules/hosted-cluster-single-node-recovery.adoc[leveloffset=+2]
+
+[id="hcp-backup-restore"]
+== Backing up and restoring etcd on a hosted cluster on {aws-short}
+
+If you use {hcp} for {product-title}, the process to back up and restore etcd is different from xref:../backup_and_restore/control_plane_backup_and_restore/backing-up-etcd.adoc#backing-up-etcd-data_backup-etcd[the usual etcd backup process].
+
+The following procedures are specific to {hcp} on {aws-short}.
+
+:FeatureName: {hcp-capital} on the {aws-short} platform
+include::snippets/technology-preview.adoc[]
+
+// Backing up etcd on a hosted cluster
+include::modules/backup-etcd-hosted-cluster.adoc[leveloffset=+2]
+
+// Restoring an etcd snapshot on a hosted cluster
+include::modules/restoring-etcd-snapshot-hosted-cluster.adoc[leveloffset=+2]
+
+// Backing up and restoring etcd on a hosted cluster in an on-premise environment
+include::modules/hosted-cluster-etcd-backup-restore-on-prem.adoc[leveloffset=+1]
+
+[id="hcp-dr-aws"]
+== Disaster recovery for a hosted cluster within an {aws-short} region
+
+In a situation where you need disaster recovery (DR) for a hosted cluster, you can recover a hosted cluster to the same region within {aws-short}. For example, you need DR when the upgrade of a management cluster fails and the hosted cluster is in a read-only state.
+>>>>>>> 10e554b8fb (OSDOCS#10543: Replace terms with new attributes):hosted_control_planes/hcp-backup-restore-dr.adoc
+
+:FeatureName: {hcp-capital}
 include::snippets/technology-preview.adoc[]
 
 The DR process involves three main steps:

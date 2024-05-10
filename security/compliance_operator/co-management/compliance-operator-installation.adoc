@@ -34,6 +34,18 @@ You can create a custom SCC for the Compliance Operator scanner pod service acco
 // only applies to 4.11+
 include::modules/compliance-operator-hcp-install.adoc[leveloffset=+1]
 
+<<<<<<< HEAD
+=======
+[role="_additional-resources"]
+.Additional resources
+
+// 4.13+
+* xref:../../../hosted_control_planes/index.adoc#hcp-overview[{hcp-capital} overview]
+//
+// 4.11-4.12, commenting out of 4.13-main
+//* xref:../../../architecture/control-plane.adoc#hosted-control-planes-overview_control-plane[Overview of {hcp} (Technology Preview)]
+
+>>>>>>> 10e554b8fb (OSDOCS#10543: Replace terms with new attributes)
 [id="additional-resources-installing-the-compliance-operator"]
 [role="_additional-resources"]
 == Additional resources
