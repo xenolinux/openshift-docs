@@ -27,6 +27,8 @@ management cluster:: An {product-title} cluster where the HyperShift Operator is
 
 management cluster infrastructure:: Network, compute, and storage resources of the management cluster.
 
+node pool:: Contains the worker machines to use for the data plane.
+
 [id="hosted-control-planes-personas_{context}"]
 == Personas
 
