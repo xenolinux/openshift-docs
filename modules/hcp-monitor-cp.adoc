@@ -10,7 +10,7 @@ While the deployment proceeds, you can monitor the control plane by gathering in
 
 * The HyperShift Operator
 * The `HostedControlPlane` pod
-* The bare metal hosts
+* The bare-metal hosts
 * The agents
 * The `InfraEnv` resource
 * The `HostedCluster` and `NodePool` resources

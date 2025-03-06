@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="hcp-bm-hosts_{context}"]
-= Creating bare metal hosts for the hosted cluster
+= Creating bare-metal hosts for the hosted cluster
 
 A _bare metal host_ is an `openshift-machine-api` object that encompasses physical and logical details so that it can be identified by a Metal3 Operator. Those details are associated with other Assisted Service objects, known as _agents_.
 

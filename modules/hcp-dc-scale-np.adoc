@@ -6,7 +6,7 @@
 [id="hcp-dc-scale-np_{context}"]
 = Scaling up the node pool
 
-After you create the bare metal hosts, their statuses change from `Registering` to `Provisioning` to `Provisioned`. The nodes start with the `LiveISO` of the agent and a default pod that is named `agent`. That agent is responsible for receiving instructions from the Assisted Service Operator to install the {product-title} payload.
+After you create the bare-metal hosts, their statuses change from `Registering` to `Provisioning` to `Provisioned`. The nodes start with the `LiveISO` of the agent and a default pod that is named `agent`. That agent is responsible for receiving instructions from the Assisted Service Operator to install the {product-title} payload.
 
 .Procedure
 
