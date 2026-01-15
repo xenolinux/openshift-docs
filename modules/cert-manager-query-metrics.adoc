@@ -6,6 +6,10 @@
 [id="cert-manager-query-metrics_{context}"]
 = Querying metrics for the {cert-manager-operator} operands
 
+<<<<<<< HEAD
+=======
+[role="_abstract"]
+>>>>>>> 73d14cc2c0 ([enterprise-4.19]OSDOCS#17173: CQA 2.0 cert-manager Operator)
 As a cluster administrator, or as a user with view access to all namespaces, you can query {cert-manager-operator} operands metrics by using the {product-title} web console or the command-line interface (CLI). For more information, see "Accessing metrics".
 
 .Prerequisites
@@ -18,6 +22,7 @@ As a cluster administrator, or as a user with view access to all namespaces, you
 
 . In the {product-title} web console, navigate to *Observe* → *Metrics*.
 
+<<<<<<< HEAD
 . In the query field, enter the following PromQL expressions to query the {cert-manager-operator} operands metric for each operand:
 +
 [source,promql]
@@ -33,4 +38,22 @@ As a cluster administrator, or as a user with view access to all namespaces, you
 [source,promql]
 ----
 {job="cert-manager-cainjector"}
+=======
+. Add a query by using one of the following formats:
+
+.. Specify the endpoints:
++
+[source,promql]
+----
+{instance="<endpoint>"}
+----
++
+Replace `<endpoint>` with the value of the endpoint for the `cert-manager` service. You can find the endpoint value by running the following command: `oc describe service cert-manager -n cert-manager`.
+
+.. Specify the `tcp-prometheus-servicemonitor` port:
++
+[source,promql]
+----
+{endpoint="tcp-prometheus-servicemonitor"}
+>>>>>>> 73d14cc2c0 ([enterprise-4.19]OSDOCS#17173: CQA 2.0 cert-manager Operator)
 ----
