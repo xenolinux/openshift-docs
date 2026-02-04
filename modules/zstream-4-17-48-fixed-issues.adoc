@@ -1,0 +1,17 @@
+// Module included in the following assemblies:
+//
+// * release_notes/ocp-4-17-release-notes.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="zstream-4-17-48-fixed-issues_{context}"]
+= Fixed issues
+
+[role="_abstract"]
+The following issues are fixed with this release:
+
+* Before this update, aggregated API servers on {product-title} used in-memory loopback certificates that were valid for only one year. With this release, these servers now use in-memory loopback certificates that are valid for three years. (link:https://issues.redhat.com/browse/OCPBUGS-66227[OCPBUGS-66227])
+
+* Before this update, AWS APIs returned inconsistent results regarding the existence of a `Machine`. The safeguards designed to handle this inconsistency checked the stored instance ID in the incorrect location. Consequently, during AWS API instability, virtual machines (VMs) leaked and attempted to join the cluster indefinitely. With this release, the system uses the correct provider ID for consistency checks. If an instance does not appear within 20 seconds, the machine status changes to `Failed` to prevent instance leaks. (link:https://issues.redhat.com/browse/OCPBUGS-73822[OCPBUGS-73822])
+
+* Before this update, when a hosted cluster was configured with a proxy URL such as `http://user:pass@host`, the authentication header was not getting forwarded by the Konnectivity proxy to the user proxy, failing authentication. With this release, the proper authentication header is sent when a user and password is specified in the proxy URL. (link:https://issues.redhat.com/browse/OCPBUGS-74230[OCPBUGS-74230])
+
