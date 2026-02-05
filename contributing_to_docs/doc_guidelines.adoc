@@ -157,6 +157,7 @@ Add the attribute from the following list that corresponds to your file type:
 * `:_mod-docs-content-type: PROCEDURE`
 * `:_mod-docs-content-type: REFERENCE`
 * `:_mod-docs-content-type: SNIPPET`
+* `:_mod-docs-content-type: ATTRIBUTES` (Only for attributes files)
 
 Place the attribute in the file metadata. The following list describes the best attribute placement options:
 
@@ -170,6 +171,8 @@ The metadata examples contain sample placement for each file type, xref:assembly
 == Attribute files
 
 All attribute files must be placed in the `_attributes` directory. In most cases involving OpenShift Container Platform or OKD, add attributes to the `common-attributes.adoc` file instead of creating or using a separate attributes file. Before you add an attribute, review the contents of the `common-attributes.adoc` file to ensure that it is not already defined.
+
+When creating a new attribute file, define `:_mod-docs-content-type: ATTRIBUTES` in the file metadata. Make sure that the content type attribute is on a line by itself in the beginning lines of the file.
 
 [IMPORTANT]
 ====
